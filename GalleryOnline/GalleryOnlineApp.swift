@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct GalleryOnlineApp: App {
+    @State private var albumViewModel = AlbumViewModel()
     var body: some Scene {
         WindowGroup {
-            MainView()
+            AlbumListView().environment(albumViewModel)
         }
     }
 }
